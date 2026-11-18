@@ -58,14 +58,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .pill.ghost { color: var(--primary); }
 .pill.ghost::before { background: transparent; border: 1.5px solid var(--primary); }
 
-/* hero, with the Rosetta Stone as a faint background */
+/* hero */
 .hero { text-align: center; padding: 96px 0 72px; position: relative; isolation: isolate; }
-.hero::before { content: ""; position: absolute; inset: -40px -10vw 0; z-index: -1; pointer-events: none;
-  background: url("img/rosetta-stone.jpg") center 35% / cover no-repeat;
-  filter: grayscale(1) contrast(1.15); opacity: .10;
-  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 45%, #000 30%, transparent 75%);
-          mask-image: radial-gradient(ellipse 60% 70% at 50% 45%, #000 30%, transparent 75%); }
-:root[data-theme="dark"] .hero::before { filter: grayscale(1) invert(1) contrast(1.1); opacity: .07; }
 .hero h1 { color: var(--head); font-size: clamp(44px, 7.5vw, 76px); line-height: 1.05; letter-spacing: -.035em; font-weight: 800; margin: 0 auto 22px; max-width: 900px; }
 .hero p { color: var(--ink); font-size: 17px; margin: 0 auto 34px; max-width: 620px; }
 .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -215,7 +209,7 @@ footer a:hover { color: var(--primary); }
 
   <footer>
     <span>Open Languages Collective · <span id="year">2026</span></span>
-    <span><a href="https://gitlab.com/open-lang-research/openlanguagecollective">GitLab</a> · CC BY 4.0 · Photo: <a href="https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG">Hans Hillewaert</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span>
+    <span><a href="https://gitlab.com/open-lang-research/openlanguagecollective">GitLab</a> · CC BY 4.0</span>
   </footer>
 </div>
 <script>
