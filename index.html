@@ -79,6 +79,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 
 /* numbers card */
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); padding: 30px; }
+.stats-map { display: grid; grid-template-columns: 1fr 150px; gap: 24px; align-items: center; }
+.mini-map { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
 .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px 20px; }
 .stats b { display: block; color: var(--head); font-size: 34px; letter-spacing: -.03em; font-variant-numeric: tabular-nums; line-height: 1.1; }
 .stats span { font-size: 14px; color: var(--muted); }
@@ -112,15 +114,6 @@ footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 28px 0 44
 footer a { color: var(--muted); }
 footer a:hover { color: var(--primary); }
 
-/* Africa sample map */
-.africa { padding-bottom: 56px; }
-.africa .row { padding-bottom: 32px; }
-.map { display: block; width: 100%; height: auto; border-radius: 14px; }
-.bars { display: grid; grid-template-columns: auto 1fr auto; gap: 10px 14px; align-items: center; font-size: 14px; }
-.bars span { color: var(--ink); }
-.bars i { display: block; height: 8px; border-radius: 4px; background: var(--primary); }
-.bars b { color: var(--head); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
-
 @media (max-width: 900px) {
   .links a.l { display: none; }
   .row { grid-template-columns: 1fr; gap: 36px; padding: 40px 0; }
@@ -128,7 +121,7 @@ footer a:hover { color: var(--primary); }
   .steps { grid-template-columns: 1fr 1fr; }
   .hero { padding: 64px 0 40px; }
 }
-@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } .layer { flex-direction: column; gap: 2px; } }
+@media (max-width: 520px) { .stats-map { grid-template-columns: 1fr; } .mini-map { max-width: 220px; } .steps { grid-template-columns: 1fr; } .layer { flex-direction: column; gap: 2px; } }
 </style>
 </head>
 <body>
@@ -165,11 +158,14 @@ footer a:hover { color: var(--primary); }
   <section class="row flip">
     <div class="card" aria-label="Sample run: release v0.1.2 in numbers">
       <p class="eyebrow">Sample run · release <span>v0.1.2</span></p>
-      <div class="stats">
-        <div><b>40,493</b><span>entries in the master list</span></div>
-        <div><b>8,850</b><span>languages</span></div>
-        <div><b>31,643</b><span>dialects and variants</span></div>
-        <div><b>147,828</b><span>source rows, none lost</span></div>
+      <div class="stats-map">
+        <div class="stats">
+          <div><b>40,493</b><span>entries in the master list</span></div>
+          <div><b>8,850</b><span>languages</span></div>
+          <div><b>31,643</b><span>dialects and variants</span></div>
+          <div><b>147,828</b><span>source rows, none lost</span></div>
+        </div>
+        <img class="mini-map" src="visuals/africa-map_v0.1.2.jpg" width="336" height="365" alt="Release v0.1.2 map of Africa: blue dots for each language, densest across West and Central Africa">
       </div>
       <p class="fine">Figures from one sample run of the tool. A run on other sources or source versions will give different numbers.</p>
     </div>
@@ -177,21 +173,6 @@ footer a:hover { color: var(--primary); }
       <h3>Every row traced back to its sources</h3>
       <p>Glottolog anchors the list, with Ethnologue and ROLV merged in. Each entry links to the source rows and source versions behind it, and possible duplicates are scored and listed for review, never merged on a guess.</p>
       <p>The line between "language" and "dialect" in this list is the one drawn in the source data. We recognize the value of the term "language variety" or "speech variety," a broader category that makes no such distinction.</p>
-    </div>
-  </section>
-
-  <section class="africa" id="africa">
-    <div class="row">
-      <div>
-        <h3>A closer look: Africa</h3>
-        <p>In this sample run, 2,376 of the 8,850 languages are in Africa, with about 10,100 dialects and variants linked to them. These five countries have the most languages:</p>
-      </div>
-      <div class="bars" role="list" aria-label="African countries with the most languages in the sample run"><span>Nigeria</span><i style="width:100.0%"></i><b>497</b><span>Cameroon</span><i style="width:48.7%"></i><b>242</b><span>DR Congo</span><i style="width:34.8%"></i><b>173</b><span>Chad</span><i style="width:21.5%"></i><b>107</b><span>Tanzania</span><i style="width:21.3%"></i><b>106</b></div>
-    </div>
-    <div class="card">
-      <p class="eyebrow">Sample run · release <span>v0.1.2</span> · Africa</p>
-      <a href="visuals/languages-map_20261119-072702.geo.visual.html"><img class="map" src="visuals/africa-map_v0.1.2.jpg" width="1600" height="1000" loading="lazy" alt="The harness map for release v0.1.2, zoomed to Africa: blue dots for 2,227 African languages, densest across West and Central Africa, with the map legend listing every world area"></a>
-      <p class="fine">Screenshot of the map the harness made for release v0.1.2, zoomed to Africa. Its counts cover the languages it can place on the map. <a href="visuals/languages-map_20261119-072702.geo.visual.html">Open the full interactive map</a>.</p>
     </div>
   </section>
 
