@@ -82,6 +82,9 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px 20px; }
 .stats b { display: block; color: var(--head); font-size: 34px; letter-spacing: -.03em; font-variant-numeric: tabular-nums; line-height: 1.1; }
 .stats span { font-size: 14px; color: var(--muted); }
+.card .eyebrow { margin: 0 0 22px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); }
+.card .eyebrow span { text-transform: none; }
+.card .fine { margin: 24px 0 0; font-size: 13px; color: var(--muted); }
 
 /* big section title */
 .big { color: var(--head); font-size: clamp(32px, 4.6vw, 46px); line-height: 1.1; letter-spacing: -.03em; font-weight: 800; margin: 64px 0 28px; max-width: 640px; }
@@ -151,13 +154,15 @@ footer a:hover { color: var(--primary); }
   </section>
 
   <section class="row flip">
-    <div class="card" aria-label="Release v0.1.2 in numbers">
+    <div class="card" aria-label="Sample run: release v0.1.2 in numbers">
+      <p class="eyebrow">Sample run · release <span>v0.1.2</span></p>
       <div class="stats">
         <div><b>40,493</b><span>entries in the master list</span></div>
         <div><b>8,850</b><span>languages</span></div>
         <div><b>31,643</b><span>dialects and variants</span></div>
         <div><b>147,828</b><span>source rows, none lost</span></div>
       </div>
+      <p class="fine">Figures from one sample run of the tool. A run on other sources or source versions will give different numbers.</p>
     </div>
     <div>
       <h3>Every row traced back to its sources</h3>
