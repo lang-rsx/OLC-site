@@ -28,12 +28,11 @@ a { color: var(--primary); text-decoration: none; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
 /* soft glows across the top */
-.glow { position: absolute; inset: 0 0 auto 0; height: 560px; overflow: hidden; pointer-events: none; z-index: 0;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0; opacity: .4; }
-.glow i { display: block; filter: blur(106px); border-radius: 50%; }
-.glow i:first-child { height: 224px; margin-top: -40px; background: linear-gradient(to bottom right, var(--glow-a), var(--glow-b)); }
-.glow i:last-child { height: 128px; margin-top: 40px; background: linear-gradient(to right, var(--glow-c), var(--glow-d)); }
-:root[data-theme="dark"] .glow { opacity: .28; }
+.glow { position: absolute; inset: 0 0 auto 0; height: 640px; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 22% 0%, color-mix(in srgb, var(--glow-a) 16%, transparent) 0%, color-mix(in srgb, var(--glow-a) 9%, transparent) 30%, color-mix(in srgb, var(--glow-a) 3%, transparent) 55%, transparent 80%),
+    radial-gradient(ellipse 55% 65% at 82% 0%, color-mix(in srgb, var(--glow-c) 12%, transparent) 0%, color-mix(in srgb, var(--glow-c) 7%, transparent) 30%, color-mix(in srgb, var(--glow-c) 2%, transparent) 55%, transparent 80%); }
+:root[data-theme="dark"] .glow { opacity: .9; }
 
 /* nav */
 nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 16px; }
@@ -121,7 +120,7 @@ footer a:hover { color: var(--primary); }
 </style>
 </head>
 <body>
-<div class="glow" aria-hidden="true"><i></i><i></i></div>
+<div class="glow" aria-hidden="true"></div>
 <div class="wrap">
   <nav>
     <a class="logo" href="#top" aria-label="Open Languages Collective"><span class="dot"></span><span class="bar"></span>OLC</a>
