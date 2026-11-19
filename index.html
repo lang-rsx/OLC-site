@@ -72,6 +72,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .row h2 { color: var(--head); font-size: clamp(28px, 3.4vw, 36px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 22px; }
 .row h3 { color: var(--primary); font-size: clamp(24px, 3vw, 32px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 18px; }
 .row p { margin: 0; font-size: 16.5px; }
+.row p + p { margin-top: 14px; }
 
 .about { max-width: 760px; margin: 0 auto; padding: 40px 0 24px; text-align: center; }
 .about h2 { color: var(--head); font-size: clamp(28px, 3.4vw, 36px); letter-spacing: -.02em; margin: 0 0 18px; }
@@ -141,7 +142,7 @@ footer a:hover { color: var(--primary); }
     <p>An open language-research harness that any modern AI agent can follow to build one traceable list of the world's languages and dialects.</p>
     <div class="cta">
       <a class="pill" href="https://gitlab.com/open-lang-research/openlanguagecollective"><svg class="gl" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 00-.867 0L16.418 9.45H7.582L4.919 1.263a.455.455 0 00-.867 0L1.386 9.45.044 13.587a.924.924 0 00.331 1.023L12 23.054l11.625-8.443a.92.92 0 00.33-1.024"/></svg>View on GitLab</a>
-      <a class="pill ghost" href="https://gitlab.com/open-lang-research/openlanguagecollective/-/tree/main/releases/v0.1.1">See release v0.1.1</a>
+      <a class="pill ghost" href="https://gitlab.com/open-lang-research/openlanguagecollective/-/tree/main/releases/v0.1.2">See release v0.1.2</a>
     </div>
   </header>
 
@@ -151,7 +152,7 @@ footer a:hover { color: var(--primary); }
   </section>
 
   <section class="row flip">
-    <div class="card" aria-label="Release v0.1.1 in numbers">
+    <div class="card" aria-label="Release v0.1.2 in numbers">
       <div class="stats">
         <div><b>40,493</b><span>entries in the master list</span></div>
         <div><b>8,850</b><span>languages</span></div>
@@ -162,6 +163,7 @@ footer a:hover { color: var(--primary); }
     <div>
       <h3>Every row traced back to its sources</h3>
       <p>Glottolog anchors the list, with Ethnologue and ROLV merged in. Each entry links to the source rows and source versions behind it, and possible duplicates are scored and listed for review, never merged on a guess.</p>
+      <p>The line between "language" and "dialect" in this list is the one drawn in the source data. We recognize the value of the term "language variety" or "speech variety," a broader category that makes no such distinction.</p>
     </div>
   </section>
 
@@ -179,7 +181,7 @@ footer a:hover { color: var(--primary); }
       <p>The same inputs give the same list, down to one fingerprint anyone can compare. Each release records the source versions and the tool version that made it.</p>
     </div>
     <div>
-      <h3>Works with any modern AI agent</h3>
+      <h3>Built to work with any modern AI agent</h3>
       <div class="layers">
         <div class="layer"><code>.claude/skills/</code><span>Generic steps that work on any data.</span></div>
         <div class="layer"><code>rules/rules.md</code><span>The language knowledge, written by domain experts.</span></div>
@@ -191,9 +193,9 @@ footer a:hover { color: var(--primary); }
 
   <section class="row flip" id="release">
     <div class="card">
-      <h3 style="margin-bottom:8px">v0.1.1</h3>
-      <p style="margin-bottom:22px">18 November 2026 · master list, map, two charts and the method document.</p>
-      <a class="pill" href="https://gitlab.com/open-lang-research/openlanguagecollective/-/tree/main/releases/v0.1.1">Open the release</a>
+      <h3 style="margin-bottom:8px">v0.1.2</h3>
+      <p style="margin-bottom:22px">19 November 2026 · master list, map, two charts and the method document.</p>
+      <a class="pill" href="https://gitlab.com/open-lang-research/openlanguagecollective/-/tree/main/releases/v0.1.2">Open the release</a>
     </div>
     <div>
       <h2>Latest release</h2>
