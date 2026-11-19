@@ -76,6 +76,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .about { max-width: 760px; margin: 0 auto; padding: 40px 0 24px; text-align: center; }
 .about h2 { color: var(--head); font-size: clamp(28px, 3.4vw, 36px); letter-spacing: -.02em; margin: 0 0 18px; }
 .about p { margin: 0; font-size: 17px; }
+.about p + p { margin-top: 14px; }
+.about strong { color: var(--head); font-weight: 600; }
 
 /* numbers card */
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); padding: 30px; }
@@ -152,7 +154,9 @@ footer a:hover { color: var(--primary); }
 
   <section class="about" id="about">
     <h2>About</h2>
-      <p>The major language datasets each describe the world's languages in their own way. This harness merges them into one master list: one row per language and dialect, every row traced back to the exact source rows and versions it came from, and every merge and possible duplicate on record. It is a set of plain-text instructions, rules and scripts, so it runs in whichever AI agent you already use.</p>
+      <p>Anyone exploring the world's languages soon finds that the major datasets vary. Each was built for its own purpose, with its own names, codes and line between language and dialect. The same language can appear under several names, cross national borders, and be counted differently in every source. When a figure has to hold up in a plan, a report or a conversation with partners, it is often unclear where an entry came from or whether two entries describe the same language.</p>
+      <p>This harness does that work in a way anyone can trace. It merges the sources into one master list, links every row to the source rows and versions behind it, records every merge and possible duplicate for review, and draws a map and explorers to show the result. Every figure can be followed back to where it came from.</p>
+      <p><strong>Bring your own data. Bring your own rules.</strong> The harness is open for anyone to use. Start from the sources you trust, add your own lists alongside them, set the rules that fit your context, and run it in whichever AI agent you already use.</p>
   </section>
 
   <section class="row flip">
