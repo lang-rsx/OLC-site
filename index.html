@@ -64,6 +64,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .hero { text-align: center; padding: 96px 0 72px; position: relative; isolation: isolate; }
 .hero h1 { color: var(--head); font-size: clamp(44px, 7.5vw, 76px); line-height: 1.05; letter-spacing: -.035em; font-weight: 800; margin: 0 auto 22px; max-width: 900px; }
 .hero p { color: var(--ink); font-size: 17px; margin: 0 auto 34px; max-width: 620px; }
+.hero .eyebrow { margin: 0 auto 18px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--primary); }
 .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* rows: text on one side, a card on the other */
@@ -77,7 +78,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .about h2 { color: var(--head); font-size: clamp(28px, 3.4vw, 36px); letter-spacing: -.02em; margin: 0 0 18px; }
 .about p { margin: 0; font-size: 17px; }
 .about p + p { margin-top: 14px; }
-.about strong { color: var(--head); font-weight: 600; }
+.about.byo { padding-top: 32px; }
+.about.byo h2 { color: var(--primary); }
 
 /* numbers card */
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); padding: 30px; }
@@ -144,6 +146,7 @@ footer a:hover { color: var(--primary); }
   </nav>
 
   <header class="hero" id="top">
+    <p class="eyebrow">Language-research harness</p>
     <h1>Open Languages Collective</h1>
     <p>An open language-research harness that any modern AI agent can follow to build one traceable list of the world's languages and dialects.</p>
     <div class="cta">
@@ -154,9 +157,13 @@ footer a:hover { color: var(--primary); }
 
   <section class="about" id="about">
     <h2>About</h2>
-      <p>Anyone exploring the world's languages soon finds that the major datasets vary. Each was built for its own purpose, with its own names, codes and line between language and dialect. The same language can appear under several names, cross national borders, and be counted differently in every source. When a figure has to hold up in a plan, a report or a conversation with partners, it is often unclear where an entry came from or whether two entries describe the same language.</p>
-      <p>This harness does that work in a way anyone can trace. It merges the sources into one master list, links every row to the source rows and versions behind it, records every merge and possible duplicate for review, and draws a map and explorers to show the result. Every figure can be followed back to where it came from.</p>
-      <p><strong>Bring your own data. Bring your own rules.</strong> The harness is open for anyone to use. Start from the sources you trust, add your own lists alongside them, set the rules that fit your context, and run it in whichever AI agent you already use.</p>
+      <p>Anyone exploring the world's languages soon finds that the major datasets vary. Each was built for its own purpose, with its own names, codes and line between language and dialect. The same language can appear under several names, cross national borders, and be counted differently in every source.</p>
+      <p>This harness brings them together in a way anyone can trace. It merges the sources into one master list, links every row to the source rows and versions behind it, records every merge and possible duplicate for review, and flags where the sources differ. It then turns the list into an interactive map and charts, so you can see where languages are spoken and explore how they relate. Every figure can be followed back to where it came from.</p>
+  </section>
+
+  <section class="about byo">
+    <h2>Bring your own data. Bring your own rules.</h2>
+    <p>The harness is open for anyone to use. Start from the sources you trust, add your own lists alongside them, set the rules that fit your context, add skills for the steps your work needs, and run it in whichever AI agent you already use.</p>
   </section>
 
   <section class="row flip">
@@ -171,7 +178,7 @@ footer a:hover { color: var(--primary); }
         </div>
         <img class="mini-map" src="visuals/africa-map_v0.1.2.jpg" width="336" height="365" alt="Release v0.1.2 map of Africa: blue dots for each language, densest across West and Central Africa">
       </div>
-      <p class="fine">Figures from one sample run of the tool. A run on other sources or source versions will give different numbers.</p>
+      <p class="fine">Figures from one sample run of the harness. A run on other sources or source versions will give different numbers.</p>
     </div>
     <div>
       <h3>Every row traced back to its sources</h3>
@@ -180,7 +187,7 @@ footer a:hover { color: var(--primary); }
     </div>
   </section>
 
-  <h2 class="big" id="how">Four steps from sources to a release</h2>
+  <h2 class="big" id="how">The harness in four steps</h2>
   <div class="steps">
     <div class="step"><code>/catalog</code><p>Describes every source file and its version.</p></div>
     <div class="step"><code>/masterlist</code><p>Merges the sources into one row per language and dialect.</p></div>
@@ -191,7 +198,7 @@ footer a:hover { color: var(--primary); }
   <section class="row">
     <div>
       <h3>Reproducible by anyone</h3>
-      <p>The same inputs give the same list, down to one fingerprint anyone can compare. Each release records the source versions and the tool version that made it.</p>
+      <p>The same inputs give the same list, down to one fingerprint anyone can compare. Each release records the source versions and the harness version that made it.</p>
     </div>
     <div>
       <h3>Built to work with any modern AI agent</h3>
@@ -212,13 +219,13 @@ footer a:hover { color: var(--primary); }
     </div>
     <div>
       <h2>Latest release</h2>
-      <p>Each release shows what the tool produces from one set of sources. It is a starting point for review and improvement, not a final list.</p>
+      <p>Each release shows what the harness produces from one set of sources. It is a starting point for review and improvement, not a final list.</p>
     </div>
   </section>
 
   <section class="closing">
     <h2>Help shape it.</h2>
-    <p>Sharper matching rules, new sources, better scripts, clearer docs: open an issue or a merge request.</p>
+    <p>Sharper matching rules, new sources, new skills, better scripts, clearer docs: open an issue or a merge request.</p>
     <div class="cta">
       <a class="pill" href="https://gitlab.com/open-lang-research/openlanguagecollective/-/blob/main/CONTRIBUTING.md">Contribute</a>
       <a class="pill ghost" href="https://gitlab.com/open-lang-research/openlanguagecollective/-/issues">Open an issue</a>
